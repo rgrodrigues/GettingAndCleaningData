@@ -86,4 +86,4 @@ colnames(data2) = vars;
      ##set with the average of each variable for each activity and each subject.
 
 data3 <- aggregate(data2[,3:(ncol(data2))], by=list(activityId=data2$activityId,subjectId = data2$subjectId), mean)
-write.csv(data3, file="./data/results.csv", row.names=FALSE)
+write.table(data3, file="./data/results.txt", row.names=FALSE)
